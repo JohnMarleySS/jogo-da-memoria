@@ -1,0 +1,68 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: #232323;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vaiproteto {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 550px;
+    min-height: 600px;
+}
+
+.content div {
+    display: flex;
+    width: 120px;
+    height: 190px;
+}
+
+.face-card,
+.back-face {
+    min-width: 100px;
+    max-height: 180px;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.memory-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    position: relative;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .3s;
+}
+
+.face-card {
+    transform: rotateY(180deg);
+}
+
+.memory-card:active {
+    transform: scale(0.97);
+    transition: transform .2s;
+}
+
+.memory-card.flip {
+    transform: rotatey(180deg);
+}
